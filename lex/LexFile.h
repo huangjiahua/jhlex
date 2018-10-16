@@ -1,12 +1,11 @@
 #ifndef JHLEX_LEXFILE_H
 #define JHLEX_LEXFILE_H
-#include <string>
-#include <vector>
-#include <map>
-#include "../regex_tree/regex_tree.h"
+
+#include "lex.h"
 
 
 class LexFile {
+    friend class OutputFile;
 private:
     // user defined header code
     std::string headerCode;

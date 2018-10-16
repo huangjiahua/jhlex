@@ -51,7 +51,6 @@ void jh_update_vec(int vec[jh_type_cnt], char ch) {
     for (int i = 0; i < jh_type_cnt; i++) {
         vec[i] = jh_dtrans[i][vec[i]][(int)ch];
     }
-
 }
 
 int detect_type(const int vec[jh_type_cnt]) {
@@ -108,6 +107,7 @@ int jh_lex() {
 }
 
 
+// Tail Code
 
 int main() {
     jh_in = fopen("sample.txt", "r");

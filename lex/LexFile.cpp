@@ -91,6 +91,7 @@ void LexFile::parseLexemeCode(std::istream &is) {
             std::string pat;
             if (line.empty()) {
                 if (!getline(is, line)) break;
+                else continue;
             }
             std::string::size_type blockBegin = line.rfind('{');
             if (blockBegin == std::string::npos) break;
@@ -113,7 +114,11 @@ void LexFile::parseLexemeCode(std::istream &is) {
 }
 
 void LexFile::parseTailCode(std::istream &is) {
+    std::string line;
+    while (std::getline(is, line))
+        tailCode += line + '\n';
 
+    std::cout << tailCode << std::endl;
 }
 
 void LexFile::parsePattern(const std::string &raw, std::string &pattern,
