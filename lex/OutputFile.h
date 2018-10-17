@@ -5,6 +5,7 @@
 #ifndef JHLEX_OUTPUTFILE_H
 #define JHLEX_OUTPUTFILE_H
 #include "lex.h"
+#include <sstream>
 
 
 class OutputFile {
